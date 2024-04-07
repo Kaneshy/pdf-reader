@@ -5,7 +5,7 @@ import { initializeApp } from "firebase/app";
 // Your web app's Firebase configuration
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional
 const firebaseConfig = {
-  apiKey: "AIzaSyAb_cKox-4EZggSS_uJbayCTR38H9eo0XY",
+  apiKey: process.env.NEXT_PUBLIC_FIREBASE_API_KEY,
   authDomain: "books-reader-c7c96.firebaseapp.com",
   projectId: "books-reader-c7c96",
   storageBucket: "books-reader-c7c96.appspot.com",
