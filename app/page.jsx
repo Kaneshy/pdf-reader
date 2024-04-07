@@ -1,4 +1,7 @@
 import { books } from "@/constants/Categories";
+import Link from "next/link";
+import { IoLink } from "react-icons/io5";
+
 
 export default function Home() {
 
@@ -16,10 +19,10 @@ export default function Home() {
         <section className="grid p-4 ">
           {books.map((x) => {
             return (
-              <div className="items-center hover:bg-[#ffefa6] justify-center bg-neutral-100  flex flex-col">
+              <Link href={"/preview/" + x.title} key={x.id} className="items-center hover:bg-[#ffefa6] justify-center bg-neutral-100  flex flex-col">
                 <img src={x.imgUrl} className="w-full  h-full object-cover" alt="" />
                 <p className="p-2 anton-regular text-black uppercase">{x.title}</p>
-              </div>
+              </Link>
             )
           })}
         </section>
@@ -29,6 +32,11 @@ export default function Home() {
         <h1 className="mt-12 text-3xl font-bold anton-regular   uppercase" >Personal Library</h1>
         <h2 className=" anton-regular text-sm text-neutral-700 " >A place for Simon Tofield to share his creative diary, often showcasing his life with 6 cats.</h2>
         <img src='/assets/cats1.png' className="w-400 rounded-t-xl h-full object-cover" alt="" />
+        <a href="https://mega.nz/folder/FvIGRYAY#Q4SNDx5-ykAkuAfBsV4PcA" target="_blank" className="flex gap-4 items-center justify-center">
+          <IoLink size={24} />
+          <p  className=" anton-regular text-sm text-neutral-700 " >Libros adicionales sobre un paseo por el cosmos</p>
+        </a>
+
       </section>
 
     </main>
