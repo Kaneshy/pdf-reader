@@ -19,12 +19,6 @@ export const books = [
         desc: '',
     },
     {
-        id: 3984397,
-        imgUrl: 'https://res.cloudinary.com/dh01ngdjo/image/upload/v1712370593/pdfreader/_928bd5e8-3015-48c9-8aa1-5a5cb8f33d85_oldyq9.jpg',
-        title: 'English',
-        desc: '',
-    },
-    {
         id: 3984398,
         imgUrl: 'https://res.cloudinary.com/dztz492su/image/upload/v1712454511/coversbooks/atptL_j30vpe.png',
         title: 'Math',
@@ -69,6 +63,12 @@ export const books = [
         id: 3984407,
         imgUrl: 'https://res.cloudinary.com/dztz492su/image/upload/v1712454520/coversbooks/Extra.2e16d0ba.fill-1200x630_dqssd7.jpg',
         title: 'News',
+        desc: '',
+    },
+    {
+        id: 3984397,
+        imgUrl: 'https://res.cloudinary.com/dh01ngdjo/image/upload/v1712370593/pdfreader/_928bd5e8-3015-48c9-8aa1-5a5cb8f33d85_oldyq9.jpg',
+        title: 'English',
         desc: '',
     },
     {

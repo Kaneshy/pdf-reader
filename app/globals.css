@@ -29,6 +29,15 @@ body {
 .grid {
   width: 100%;
   display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  margin: 0 auto;
+  gap: 30px;
+  row-gap: 30px;
+}
+
+.grid-b {
+  width: 100%;
+  display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   margin: 0 auto;
   gap: 30px;

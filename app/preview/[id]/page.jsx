@@ -9,7 +9,7 @@ const PreviewPage = ({ params }) => {
         const fetchCategories = async () => {
             try {
                 console.log(params.id)
-                const res = await axios.get(`https://personal-encyclopedia.vercel.app/api/book/${params.id}`);
+                const res = await axios.get(`http://localhost:3000/api/book/${params.id}`);
                 if (res.status === 200) {
                     setCategories(res.data);
                 }
@@ -51,9 +51,9 @@ const PreviewPage = ({ params }) => {
 
             <section className="grid p-4 max-w-a pb-12 ">
                 {categories.map((category, index) => (
-                    <a href={category.link} target='_blank' key={index} className="items-center bg- max-w-96 hover:bg-[#ffefa6] justify-center bg-neutral-100  flex flex-col">
+                    <a href={category.link} target='_blank' key={index} className="p-2 bg-black  transition-all duration-300 transform text-white items-center max-w-80 hover:bg-[#ffefa6] hover:text-black justify-center  flex flex-col">
                         <img src={category.imgUrl} className="w-full  h-full object-cover" alt="" />
-                        <p className="p-2 anton-regular text-black uppercase">{category.title}</p>
+                        <p className="p-2 anton-regular  uppercase">{category.title}</p>
                     </a>
                 ))}
             </section>

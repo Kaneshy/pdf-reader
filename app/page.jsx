@@ -16,12 +16,12 @@ export default function Home() {
 
 
       <section className="max-w-a pb-12">
-        <section className="grid p-4 ">
+        <section className="grid-b p-4 ">
           {books.map((x) => {
             return (
-              <Link href={"/preview/" + x.title} key={x.id} className="items-center hover:bg-[#ffefa6] justify-center bg-neutral-100  flex flex-col">
+              <Link href={"/preview/" + x.title} key={x.id} className="items-center transition-all duration-300 transform p-2 bg-black hover:bg-[#ffefa6] justify-center  flex flex-col">
                 <img src={x.imgUrl} className="w-full  h-full object-cover" alt="" />
-                <p className="p-2 anton-regular text-black uppercase">{x.title}</p>
+                <p className="p-2 anton-regular text-white uppercase">{x.title}</p>
               </Link>
             )
           })}
