@@ -9,7 +9,7 @@ const PreviewPage = ({ params }) => {
         const fetchCategories = async () => {
             try {
                 console.log(params.id)
-                const res = await axios.get(`http://localhost:3000/api/book/${params.id}`);
+                const res = await axios.get(`/api/book/${params.id}`);
                 if (res.status === 200) {
                     setCategories(res.data);
                 }
