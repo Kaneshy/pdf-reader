@@ -9,7 +9,7 @@ const PreviewPage = ({ params }) => {
         const fetchCategories = async () => {
             try {
                 console.log(params.id)
-                const res = await axios.get(`https://personal-encyclopedia.vercel.app/${params.id}`);
+                const res = await axios.get(`https://personal-encyclopedia.vercel.app/api/book/${params.id}`);
                 if (res.status === 200) {
                     setCategories(res.data);
                 }
