@@ -20,7 +20,8 @@ const UploadProductsPage = () => {
     const [videoPerc, setVideoPerc] = useState(0);
     const [inputs, setInputs] = useState({});
     const router = useRouter()
-    const [adminValue, setAdminValue] = useState(false)
+    const [adminValue, setAdminValue] = useState(undefined)
+    const [idiomValue, setIdiomValue ] = useState(undefined)
 
     const [selectedClothing, setSelectedClothing] = useState([]);
 
@@ -85,7 +86,7 @@ const UploadProductsPage = () => {
 
     const handleUpload = async (e) => {
         e.preventDefault();
-        const data = { ...inputs, selectedClothing }
+        const data = { ...inputs, selectedClothing, adminValue, idiomValue }
         console.log(data)
 
         try {
@@ -156,10 +157,21 @@ const UploadProductsPage = () => {
                     <select name='categorie' className="border w-full border-gray-300 bg-neutral-900 text-gray-400 rounded-md px-4 py-2 focus:outline-none focus:border-blue-500"
                         value={adminValue} onChange={(e) => setAdminValue(e.target.value)}
                     >
-                        <option value="unisex" >Mega</option>
-                        <option value="male" >Google Drive</option>
-                        <option value="female" >Cloudinary</option>
-                        <option value="kids" >other</option>
+                        <option value="mega" >Mega</option>
+                        <option value="googledrive" >Google Drive</option>
+                        <option value="cloudinary" >Cloudinary</option>
+                        <option value="other" >other</option>
+                    </select>
+                </div>
+
+                <div className="mb-4 items-center border-gray-500 border p-2 w-full">
+                    <label htmlFor="idioma" className="text-small-semibold block text-gray-400 font-bold mb-2 ">Language (required): </label>
+                    <select name='idioma' className="border w-full border-gray-300 bg-neutral-900 text-gray-400 rounded-md px-4 py-2 focus:outline-none focus:border-blue-500"
+                        value={idiomValue} onChange={(e) => setIdiomValue(e.target.value)}
+                    >
+                        <option value="Spanish" >Spanish</option>
+                        <option value="English" >English</option>
+
                     </select>
                 </div>
 

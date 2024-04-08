@@ -10,7 +10,7 @@ export async function GET(req, params) {
   console.log('runinng get', params.params.id)
   try {
     console.log('runinng get')
-    const videos = await Book.find({selectedClothing: params.params.id})
+    const videos = await Book.find({selectedClothing: params.params.id}).sort({ createdAt: -1 })
     console.log(videos)
     return NextResponse.json(videos)
   } catch (err) {

@@ -67,9 +67,15 @@ export const books = [
     },
     {
         id: 3984397,
-        imgUrl: 'https://res.cloudinary.com/dh01ngdjo/image/upload/v1712370593/pdfreader/_928bd5e8-3015-48c9-8aa1-5a5cb8f33d85_oldyq9.jpg',
+        imgUrl: 'https://res.cloudinary.com/dh01ngdjo/image/upload/v1712520789/pdfs/Cambridge_hvciox.webp',
         title: 'English',
         desc: '',
+    },
+    {
+        id: 3984410,
+        imgUrl: 'https://res.cloudinary.com/dh01ngdjo/image/upload/v1712518783/pdfs/1_DMlKhqsvru2OMfHkBBBeUw_xvf3yi.jpg',
+        title: 'science fiction',
+        desc: 'science fiction',
     },
     {
         id: 3984408,
@@ -81,5 +87,5 @@ export const books = [
 ]
 
 export const prendas = [
-    'Physics', 'Biology', 'Computer Science', 'English', 'Math', 'History', 'Geography', 'Chemistry', 'History', 'Architecture', 'Programming', 'Art', 'Articles', 'News', 'More'
+    'Physics', 'Biology', 'Computer Science', 'English', 'Math', 'History', 'Geography', 'Chemistry', 'History', 'Architecture', 'Programming', 'Art', 'Articles', 'News', 'More', 'science fiction'
 ]

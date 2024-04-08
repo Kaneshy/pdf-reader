@@ -40,7 +40,7 @@ const PreviewPage = ({ params }) => {
     }
 
     return (
-        <main className="">
+        <main className="bg-black">
 
             <section className="text-center select-none bg-[#ffefa6] p-8 flex flex-col gap-4 items-center justify-center mb-8">
                 <h1 className="mt-12 text-3xl font-bold anton-regular   uppercase" >Personal Library</h1>
@@ -49,9 +49,9 @@ const PreviewPage = ({ params }) => {
             </section>
 
 
-            <section className="grid p-4 max-w-a pb-12 ">
+            <section className="grid p-4 max-w-a  pb-12 select-none ">
                 {categories.map((category, index) => (
-                    <a href={category.link} target='_blank' key={index} className="p-2 bg-black  transition-all duration-300 transform text-white items-center max-w-80 hover:bg-[#ffefa6] hover:text-black justify-center  flex flex-col">
+                    <a href={category.link} target='_blank' key={index} className="p-2 bg-black min-h-60  transition-all duration-300 transform text-neutral-400 items-center max-w-80 [#ffefa6] hover:scale-105 hover:text-white justify-center  flex flex-col shadow-[5px_5px_rgba(165,_181,_255,_0.4),_10px_10px_rgba(165,_181,_255,_0.3),_15px_15px_rgba(165,_181,_255,_0.2),_20px_20px_rgba(165,_181,_255,_0.1),_25px_25px_rgba(165,_181,_255,_0.05)]">
                         <img src={category.imgUrl} className="w-full  h-full object-cover" alt="" />
                         <p className="p-2 anton-regular  uppercase">{category.title}</p>
                     </a>

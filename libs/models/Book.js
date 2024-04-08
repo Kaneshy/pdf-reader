@@ -24,6 +24,14 @@ const BookSchema = new mongoose.Schema({
     desc: {
         type: String,
     },
+    idiomvalue: {
+        type: String,
+        default: 'spanish',
+    },
+    adminvalue: {
+        type: String,
+        default: 'googledrive',
+    },
     selectedClothing: {
         type: [],
     },

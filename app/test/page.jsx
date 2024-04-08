@@ -1,19 +1,33 @@
-import React from 'react'
+'use client'
+import { ready } from '@/actions/books-action';
+import React, { useState } from 'react';
 
 const PageTest = () => {
-  return (
-    <main>
-        <iframe src="https://drive.google.com/file/d/1twabKiig0T2sDd2Zps_PWUJJdg2Zk5Qq/preview" width="640" height="480" allow="autoplay"></iframe>
-        <iframe src="https://mega.nz/file/IqolzZQS#OKE0ut5piwarLfUw16luGHU6ImtbF_j5PWFehhaISMc" width="640" height="480" allow="autoplay"></iframe>
-    
-    <div>
-    <object data="https://drive.google.com/file/d/1twabKiig0T2sDd2Zps_PWUJJdg2Zk5Qq/preview" type="application/pdf" width="100%" height="500px">
-        <p>Unable to display PDF file. <a href="https://drive.google.com/file/d/1twabKiig0T2sDd2Zps_PWUJJdg2Zk5Qq/preview">Download</a> instead.</p>
-    </object>
-    </div>
-    
-    </main>
-  )
-}
+  const [selectedVideo, setSelectedVideo] = useState(null);
 
-export default PageTest
+  const handleFileChange = (event) => {
+    const file = event.target.files[0];
+    setSelectedVideo(file);
+  };
+
+  const handleSubmit = async () => {
+    if (!selectedVideo) {
+      console.log("No video selected!");
+      return;
+    }
+
+    // Assuming ready() function expects a video file
+    const data = await ready(selectedVideo);
+    console.log(data);
+  };
+
+  return (
+    <main className='bg-white w-full min-h-screen text-black mt-48'>
+      <label htmlFor=""></label>
+      <input type="file" accept="video/*" onChange={handleFileChange} />
+      <button className='text-black' onClick={handleSubmit}>Submit</button>
+    </main>
+  );
+};
+
+export default PageTest;
