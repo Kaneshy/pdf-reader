@@ -20,7 +20,7 @@ export default function Home() {
           {books.map((x) => {
             return (
               <Link href={"/preview/" + x.title} key={x.id} className="items-center transition-all duration-300 transform p-2 bg-black hover:bg-[#ffefa6] justify-center  flex flex-col">
-                <img src={x.imgUrl} className="w-full  h-full object-cover" alt="" />
+                <img src={x.imgUrl} className="w-full h-96 object-cover" alt="" />
                 <p className="p-2 anton-regular text-white uppercase">{x.title}</p>
               </Link>
             )

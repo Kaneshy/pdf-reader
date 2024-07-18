@@ -1,6 +1,18 @@
 
 export const books = [
     {
+        id: 3984567,
+        imgUrl: 'https://res.cloudinary.com/dh01ngdjo/image/upload/v1721276287/pixelart/1-2_ev2abp.jpg',
+        title: 'Bonds and connections',
+        desc: 'A rainbow is the product of physics working for your appreciation of beauty',
+    },
+    {
+        id: 3984565,
+        imgUrl: 'https://res.cloudinary.com/dh01ngdjo/image/upload/v1721276361/pixelart/71-_hbbERL._AC_UF894_1000_QL80__stmvi6.jpg',
+        title: 'Fantasy',
+        desc: 'A rainbow is the product of physics working for your appreciation of beauty',
+    },
+    {
         id: 3984394,
         imgUrl: 'https://res.cloudinary.com/dztz492su/image/upload/v1712454503/coversbooks/Spectrum-light-diffraction-grating-end-prism-violet_v0ehsx.webp',
         title: 'Physics',
